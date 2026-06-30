@@ -183,6 +183,21 @@
     .pub-card.first-author::before { background: var(--accent); }
     .pub-card.co-author::before { background: var(--teal); }
     .pub-card:hover { border-color: var(--border2); transform: translateX(4px); }
+    .pinned-card {
+      background: linear-gradient(135deg, rgba(124,106,255,0.18), rgba(45,212,191,0.12));
+      border: 1px solid rgba(167,139,250,0.35);
+      border-radius: 18px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 20px 60px rgba(124,106,255,0.12);
+    }
+    .pinned-label {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+      color: var(--gold); margin-bottom: 0.6rem; text-transform: uppercase;
+    }
+    .pinned-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .pinned-desc { font-size: 0.86rem; color: var(--text2); margin-bottom: 1rem; }
     .pub-venue {
       display: inline-flex; align-items: center; gap: 0.4rem;
       font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em;
@@ -325,7 +340,7 @@
       My research focuses on <strong style="color:var(--accent3)">generative visual models</strong>, 
       <strong style="color:var(--accent3)">instruction-guided video editing</strong>, and 
       <strong style="color:var(--accent3)">visual place recognition</strong>. 
-      I am currently an research intern at Baidu's Digital Human and Video Generation Group, 
+      I am currently an intern at ByteDance Douyin. Previously, I was a research intern at Baidu's Digital Human and Video Generation Group until 2026.6,
       working on video generation and controllable generation.
     </p>
     <div class="hero-links">
@@ -349,7 +364,7 @@
     <div class="avatar-card">
       <img class="avatar" src="avatar.jpg" alt="Xinyao Zhang" />
       <div class="avatar-name">Xinyao Zhang</div>
-      <div class="avatar-role">M.S. Student @ Tsinghua · Research Intern @ Baidu</div>
+      <div class="avatar-role">M.S. Student @ Tsinghua · Intern @ ByteDance Douyin</div>
       <div class="avatar-stats">
         <div class="stat">
           <div class="stat-num">3</div>
@@ -377,6 +392,22 @@
         </a>
         <a href="https://huggingface.co/syxbb/SAMA-14B" target="_blank" class="social-link" title="HuggingFace">🤗</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PINNED PROJECT -->
+<section id="featured" style="padding-top:0">
+  <div class="pinned-card">
+    <div class="pinned-label">📌 Featured Project</div>
+    <div class="pinned-title">SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing</div>
+    <div class="pinned-desc">ECCV 2026 · Co-first author · Instruction-guided video editing with released code, model, and dataset meta.</div>
+    <div class="pub-links">
+      <a href="https://cynthiazxy123.github.io/SAMA/" target="_blank" class="pub-link primary">🌐 Project Page</a>
+      <a href="https://github.com/Cynthiazxy123/SAMA" target="_blank" class="pub-link">Code</a>
+      <a href="https://arxiv.org/abs/2603.19228" target="_blank" class="pub-link">arXiv</a>
+      <a href="https://huggingface.co/syxbb/SAMA-14B" target="_blank" class="pub-link">Model</a>
+      <a href="https://huggingface.co/datasets/syxbb/SAMA-edit-filtered-1M" target="_blank" class="pub-link">Dataset</a>
     </div>
   </div>
 </section>
@@ -419,12 +450,12 @@
     <!-- SAMA -->
     <div class="pub-card co-author">
       <div>
-        <span class="pub-venue venue-preprint">📄 arXiv Preprint · Under Review at ECCV 2026</span>
+        <span class="pub-venue venue-preprint">🎉 ECCV 2026</span>
         <div class="pub-title">SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing</div>
         <div class="pub-authors">
-          <strong>Xinyao Zhang</strong>*, Wenkai Dong*, Yuxin Song*, Bo Fang, Qi Zhang, Jing Wang, Fan Chen, Hui Zhang, Haocheng Feng, Yu Lu†, Hang Zhou, Chun Yuan, Jingdong Wang
-          <br><span style="font-size:0.75rem;color:var(--text3)">*Equal contribution &nbsp; †Corresponding author</span>
-          <br><span style="font-size:0.75rem;color:var(--text3)">Baidu Inc, Tsinghua University, City University of Hong Kong, Zhejiang University</span>
+          <strong>Xinyao Zhang</strong><sup>1,2,*</sup>, Wenkai Dong<sup>2,*</sup>, Yuxin Song<sup>2,*,†</sup>, Bo Fang<sup>2,3</sup>, Qi Zhang<sup>2</sup>, Jing Wang<sup>1,2</sup>, Fan Chen<sup>2</sup>, Hui Zhang<sup>2</sup>, Haocheng Feng<sup>2</sup>, Yu Lu<sup>4,†</sup>, Hang Zhou<sup>2</sup>, Chun Yuan<sup>1</sup>, Jingdong Wang<sup>2</sup>
+          <br><span style="font-size:0.75rem;color:var(--text3)"><sup>*</sup>Equal contribution &nbsp; <sup>†</sup>Corresponding author</span>
+          <br><span style="font-size:0.75rem;color:var(--text3)"><sup>1</sup>Tsinghua University, <sup>2</sup>Baidu Inc, <sup>3</sup>City University of Hong Kong, <sup>4</sup>Zhejiang University</span>
         </div>
         <div class="pub-abstract">
           We address the fundamental challenge in instruction-guided video editing: simultaneously achieving precise semantic modification and faithful motion preservation. 
@@ -619,12 +650,20 @@
   </div>
   <div class="edu-list">
     <div class="edu-card">
+      <div class="edu-logo" style="background:linear-gradient(135deg,#111827,#38bdf8);font-size:1rem">字节</div>
+      <div>
+        <div class="edu-name">Intern · ByteDance Douyin</div>
+        <div class="edu-degree">Douyin · Generative Visual Algorithm Research</div>
+      </div>
+      <div class="edu-year">2026.6 – Present</div>
+    </div>
+    <div class="edu-card">
       <div class="edu-logo" style="background:linear-gradient(135deg,#f472b6,#8b5cf6);font-size:1.1rem">百度</div>
       <div>
         <div class="edu-name">Research Intern · Baidu Inc</div>
         <div class="edu-degree">Digital Human & Video Generation Group · Generative Visual Algorithm Research · Video editing, controllable generation, unified generation frameworks, post-training on Wan series models</div>
       </div>
-      <div class="edu-year">2025 – Present</div>
+      <div class="edu-year">2025 – 2026.6</div>
     </div>
     <div class="edu-card">
       <div class="edu-logo" style="background:linear-gradient(135deg,#fbbf24,#f59e0b);font-size:1.4rem">🏆</div>
